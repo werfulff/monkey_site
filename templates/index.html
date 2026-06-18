@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Обезьяны</title>
+</head>
+
+<body>
+    <h1>🐒 Все обезьяны</h1>
+    <a href="/add">Добавить обезьяну</a>
+
+    {% for article in articles %}
+    <div>
+        <!-- ЕСЛИ ЕСТЬ ФОТО — ПОКАЗЫВАЕМ -->
+       
+        <h1>{{ article.name }}</h1> 
+        
+        {% if article.image %}
+        <img src="{{ url_for('static', filename='uploads/' + article.image) }}" alt="{{ article.name }}"
+            style="width: 400px; height: 200px;">
+        {% else %}
+        <div style="width: 200px; height: 150px; background: #eee;">
+            Нет фото
+        </div>
+        {% endif %}
+        <h2>Ареал обитания</h2>
+        <p>{{ article.habitat }}</p>
+        <h2>Внешность</h2>
+        <p>{{ article.appearance }}</p>
+         <h2>Питание</h2>
+        <p>{{ article.food }}</p>
+        
+        <h2>Образ жизни</h2>
+        <p>{{ article.lifestyle }}</p>
+       
+        <h1>{{ article.name }}</h1>
+
+{% for monkey in article.monkeys %}
+    <div>
+        <h2>{{ monkey.name }}</h2>
+
+        <img src="{{ url_for('static',
+            filename='uploads/' + monkey.image) }}"  style="width: 400px; height: 200px;">
+
+        <p>{{ monkey.description }}</p>
+    </div>
+{% endfor %}
+        <form action="{{ url_for('delete', id=article.id) }}" method="post">
+    <button type="submit">Удалить</button>
+    <a href="/add_monkey">Добавить конкретную обезьяну</a>
+</form>
+        <hr>
+
+    </div>
+    {% endfor %}
+</body>
+
+</html>

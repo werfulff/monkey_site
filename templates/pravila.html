@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Правила поведения</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style_pravila.css') }}"/>
+</head>
+<body>
+<div id="container">
+<div id="mobile_nav">
+<div id="burger">☰</div>
+<a href="{{ url_for('main') }}"><img src="{{ url_for('static', filename='images/logo.png') }}"></a>
+</div>
+<div id="mobile_menu">
+<a href="{{ url_for('main') }}">ГЛАВНАЯ</a>
+<a href = "{{ url_for('pravila') }}">ПРАВИЛА</a>
+<a href="{{ url_for('bilet') }}">БИЛЕТЫ</a>
+<a href="{{ url_for('podopechnye') }}">ПОДОПЕЧНЫЕ</a>
+</div>
+<script src="{{ url_for('static', filename='js/burger.js') }}"></script>
+<nav>
+<a href="http://127.0.0.1:5000/main"><img src="{{ url_for('static', filename='images/logo.png') }}"></a>
+<a href="{{ url_for('main') }}">ГЛАВНАЯ</a>
+<a href = "{{ url_for('pravila') }}">ПРАВИЛА</a>
+<a href="{{ url_for('bilet') }}">БИЛЕТЫ</a>
+<a href="{{ url_for('podopechnye') }}">ПОДОПЕЧНЫЕ</a>
+</nav>
+<h1>Правила поведения</h1>
+<div id="grid-pravila">
+<div class="day">
+<div class="name">Правило 1</div>
+<p>Посещать питомник разрешается только по обозначенным дорожкам и маршрутам.</p>
+</div>
+
+<div class="day">
+<div class="name">Правило 2</div>
+<p>Не кормите обезьян своей едой — рацион животных строго контролируется сотрудниками.</p>
+</div>
+
+<div class="day">
+<div class="name">Правило 3</div>
+<p>Запрещается бросать в вольеры любые предметы, мусор или еду.</p>
+</div>
+
+
+
+<div class="day">
+<div class="name">Правило 4</div>
+<p>Не дразните животных, не стучите по стеклу и не кричите рядом с вольерами.</p>
+</div>
+
+
+<div class="day">
+<div class="name">Правило 5</div>
+<p>Соблюдайте тишину возле карантинных и ветеринарных зон.</p>
+</div>
+
+
+
+<div class="day">
+<div class="name">Правило 6</div>
+<p>Детям до 14 лет рекомендуется находиться только в сопровождении взрослых.</p>
+</div>
+
+<div class="day">
+<div class="name">Правило 7</div>
+<p>Не заходите за ограждения и служебные зоны питомника.</p>
+</div>
+
+<div class="day">
+<div class="name">Правило 8</div>
+<p>Фотосъёмка разрешена без вспышки.</p>
+</div>
+
+<div class="day">
+<div class="name">Правило 9</div>
+<p>Запрещается приносить домашних животных на территорию питомника.</p>
+</div>
+
+<div class="day">
+<div class="name">Правило 10</div>
+<p>Не пытайтесь трогать или гладить обезьян через сетки и ограждения.</p>
+</div>
+
+<div class="day">
+<div class="name">Правило 11</div>
+<p>Курение и употребление алкоголя на территории питомника запрещены</p>
+</div>
+
+<div class="day">
+<div class="name">Правило 12</div>
+<p>Бережно относитесь к растениям, оборудованию и элементам благоустройства.</p>
+</div>
+
+<div class="day">
+<div class="name">Правило 13</div>
+<p>Используйте урны для мусора и поддерживайте чистоту территории.</p>
+</div>
+
+<div class="day">
+<div class="name">Правило 14</div>
+<p>При возникновении чрезвычайной ситуации следуйте указаниям сотрудников питомника.</p>
+</div>
+
+<div class="day">
+<div class="name">Правило 15</div>
+<p>Посещение питомника означает согласие с правилами безопасности и поведения на территории.</p>
+</div>
+
+</div>
+<footer>
+<p>Prima-Park: &copy 2026</p>
+<p>Контакты<br>
+Телефон: 8(921)821-88-88<br>
+Email: prima-park@mail.ru</p>
+<p>Режим работы:<br>
+Работаем ежедневно с 10:00-22:00</p>
+</footer>
+
+</div>
+</body>
+</html>

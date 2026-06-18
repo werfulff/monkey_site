@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Наши подопечные</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style_podopechnye.css') }}">
+</head>
+<body>
+<div id="container">
+<div id="mobile_nav">
+<div id="burger">☰</div>
+<a href="{{ url_for('main') }}"><img src="{{ url_for('static', filename='images/logo.png') }}"></a>
+</div>
+<div id="mobile_menu">
+<a href="{{ url_for('main') }}">ГЛАВНАЯ</a>
+<a href = "{{ url_for('pravila') }}">ПРАВИЛА</a>
+<a href="{{ url_for('bilet') }}">БИЛЕТЫ</a>
+<a href="{{ url_for('podopechnye') }}">ПОДОПЕЧНЫЕ</a>
+</div>
+<script src="{{ url_for('static', filename='js/burger.js') }}"></script>
+<nav>
+<a href="http://127.0.0.1:5000/main"><img src="{{ url_for('static', filename='images/logo.png') }}"></a>
+<a href="{{ url_for('main') }}">ГЛАВНАЯ</a>
+<a href = "{{ url_for('pravila') }}">ПРАВИЛА</a>
+<a href="{{ url_for('bilet') }}">БИЛЕТЫ</a>
+<a href="{{ url_for('podopechnye') }}">ПОДОПЕЧНЫЕ</a>
+</nav>
+<h1>Наши подопечные</h1>
+<div id="gallery">
+
+<div class="photo_button">
+<p class="name1">Шимпанзе</p><img src="{{ url_for('static', filename='images/podopechnye_shimp.jpg') }}" alt="Шимпанзе"><br>
+<a href="/monkey/1"><button type="button">ПОДРОБНЕЕ</button></a>
+</div>
+
+<div class="photo_button">
+<p class="name1">Японские макаки</p><img src="{{ url_for('static', filename='images/podopechnye_makaka.jpg') }}" alt="Японская макака">
+<a href="/monkey/2"><button type="button">ПОДРОБНЕЕ</button></a>
+</div>
+
+<div class="photo_button">
+<p class="name1">Колобусы</p><img src="{{ url_for('static', filename='images/podopechnye_colobus.webp') }}" alt="Колобус">
+<a href="/monkey/3"><button type="button">ПОДРОБНЕЕ</button></a>
+</div>
+
+<div class="photo_button">
+<p class="name1">Чернолобые прыгуны</p><img src="{{ url_for('static', filename='images/podopechnye_prygun.jpg') }}" alt="Чернолобый прыгун">
+<a href="/monkey/4"><button type="button">ПОДРОБНЕЕ</button></a>
+</div>
+
+<div class="photo_button">
+<p class="name1">Капуцины</p><img src="{{ url_for('static', filename='images/podopechnye_capucin.jpg') }}" alt="Капуцин">
+<a href="/monkey/5"><button type="button">ПОДРОБНЕЕ</button></a>
+</div>
+
+<div class="photo_button">
+<p class="name1">Гиббоны</p><img src="{{ url_for('static', filename='images/podopechnye_gibbon.jpg') }}" alt="Гиббон">
+<a href="/monkey/6"><button type="button">ПОДРОБНЕЕ</button></a>
+</div>
+
+
+
+
+</div>
+<footer>
+<p>Prima-Park: &copy 2026</p>
+<p>Контакты<br>
+Телефон: 8(921)821-88-88<br>
+Email: prima-park@mail.ru</p>
+<p>Режим работы:<br>
+Работаем ежедневно с 10:00-22:00</p>
+</footer>
+</div>
+</body>
+</html>

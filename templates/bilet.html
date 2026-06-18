@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Купить билет</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style_bilet.css') }}" type="text/css">
+</head>
+<body>
+<div id="container">
+<div id="mobile_nav">
+<div id="burger">☰</div>
+<a href="{{ url_for('main') }}"><img src="{{ url_for('static', filename='images/logo.png') }}"></a>
+</div>
+<div id="mobile_menu">
+<a href="{{ url_for('main') }}">ГЛАВНАЯ</a>
+<a href = "{{ url_for('pravila') }}">ПРАВИЛА</a>
+<a href="{{ url_for('bilet') }}">БИЛЕТЫ</a>
+<a href="{{ url_for('podopechnye') }}">ПОДОПЕЧНЫЕ</a>
+</div>
+<script src="{{ url_for('static', filename='js/burger.js') }}"></script>
+<nav>
+<a href="http://127.0.0.1:5000/main"><img src="{{ url_for('static', filename='images/logo.png') }}"></a>
+<a href="{{ url_for('main') }}">ГЛАВНАЯ</a>
+<a href = "{{ url_for('pravila') }}">ПРАВИЛА</a>
+<a href="{{ url_for('bilet') }}">БИЛЕТЫ</a>
+<a href="{{ url_for('podopechnye') }}">ПОДОПЕЧНЫЕ</a>
+</nav>
+<h1>Забронировать посещение</h1>
+<div id="onas">
+<p>Выберите интересующую вас экскурсию и удобное время посещения. После оформления заявки 
+укажите адрес электронной почты, и мы отправим вам информацию о ближайших доступных датах 
+и времени проведения выбранной экскурсии. <br>После подтверждения бронирования вы получите 
+уведомление на указанную почту.</p>
+</div>
+<div id="tickets">
+<form name="monkey_tickets" method="POST" action="https://formspree.io/f/maqzvwqq">
+<fieldset>
+<legend>Бронь билета</legend>
+<div id="line">
+<label for="excursion">Выберите экскурсию:</label>
+<select name="kategoria" required id="excursion">
+	<option value="" selected disabled hidden></option>
+	<option value="Капуцины: маленькие гении джунглей">Капуцины: маленькие гении джунглей</option>
+	<option value="Колобусы: чёрно-белые жители леса">Колобусы: чёрно-белые жители леса</option>
+	<option value="Знакомство с чернолобыми прыгунами">Знакомство с чернолобыми прыгунами</option>
+	<option value="Макаки из Страны восходящего солнца">Макаки из Страны восходящего солнца</option>
+	<option value="Шимпанзе: интеллект, эмоции и общество">Шимпанзе: интеллект, эмоции и общество</option>
+	<option value="Мир приматов Prima-park">Мир приматов Prima-park</option>
+	<option value="Свободное посещение">Свободное посещение</option>
+	</select>
+</div>
+<div id="line">
+<label for="Время">Выберите время:</label>
+<select id="Время" name="time" required>
+	<option value="" selected disabled hidden></option>
+	<option value="10:00">10:00</option>
+	<option value="12:00">12:00</option>
+	<option value="14:00">14:00</option>
+	<option value="16:00">16:00</option>
+	<option value="17:00">17:00</option>
+	<option value="18:00">18:00</option>
+	<option value="19:00">19:00</option>
+</select>
+</div>
+
+<div id="line">
+<label for="Тип билета:">Выберите тип билета:</label>
+<select name="Тип билета" id="Тип билета" required>
+<option value="" selected disabled hidden></option>
+	<option value="детский" placeholder="Выберите категорию билета">Детский</option>
+	<option value="ученический">Ученический</option>
+	<option value="взрослый">Взрослый</option>
+	<option value="пенсионный">Пенсионный</option>
+</select>
+</div>
+
+<div id="line">
+<label for="email">Введите Вашу почту:</label>
+<input type="email" id="email" name="email" placeholder="Почта" required>
+</div>
+
+<div id="line">
+<label for="Имя">Введите Ваше имя:</label>
+<input type="text" id="Имя" name="name" placeholder="Имя" required>
+</div>
+<input type="hidden" name="_subject" value="Новая бронь билета">
+<button type="submit">Отправить</button>
+<button type="reset">Очистить</button>
+</fieldset>
+</form>
+</div>
+
+<footer>
+<p>Prima-Park: &copy 2026</p>
+<p>Контакты<br>
+Телефон: 8(921)821-88-88<br>
+Email: prima-park@mail.ru</p>
+<p>Режим работы:<br>
+Работаем ежедневно с 10:00-22:00</p>
+</footer>
